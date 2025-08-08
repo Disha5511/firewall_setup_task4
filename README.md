@@ -19,9 +19,9 @@ Configure and test basic firewall rules to allow or block traffic.
 - **After Blocking:** Ping requests timed out, confirming ICMP was blocked.
 
 ## Screenshots
-- `Screenshot (116).png` – Before blocking ICMP (ping successful)
-- `Screenshot (119).png` – After blocking ICMP (ping failed)
-- `Screenshot (118).png` – Firewall rule configuration
+- `before-ping.png` – Before blocking ICMP (ping successful)
+- `after-ping.png` – After blocking ICMP (ping failed)
+- `firewall-rule-created.png` – Firewall rule configuration
 
 ## Conclusion
 The firewall rule successfully blocked incoming ICMP Echo Requests, preventing other systems from pinging this PC.
