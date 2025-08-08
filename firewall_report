@@ -1,0 +1,56 @@
+# Task 4: Setup and Use a Firewall on Windows
+
+## 🎯 Objective
+Configure and test basic firewall rules to allow or block traffic.
+
+## 🛠 Tools Used
+- **Operating System**: Windows 10
+- **Firewall**: Windows Defender Firewall with Advanced Security
+- **Command Line Tool**: `ping`
+
+---
+
+## 📋 Steps Performed
+
+### 1. Open Windows Defender Firewall with Advanced Security
+- Press `Win + R`, type `wf.msc`, and press Enter.
+
+### 2. Create a New Inbound Rule to Block ICMP (Ping)
+1. Go to **Inbound Rules** → **New Rule**.
+2. Select **Custom Rule**.
+3. Protocol type: **ICMPv4**.
+4. Scope: All IP addresses.
+5. Action: **Block the connection**.
+6. Profile: Select all (Domain, Private, Public).
+7. Name: `Block_ICMP_Echo`.
+
+### 3. Test the Rule from Another PC
+- **Before Blocking**: From friend’s PC, ping my IP — replies received.
+- **After Blocking**: From friend’s PC, ping my IP — request timed out.
+
+---
+
+## 📊 Test Results
+
+| Test Case                  | Expected Result        | Actual Result        |
+|----------------------------|------------------------|----------------------|
+| Ping before blocking rule  | Reply received         | ✅ Success            |
+| Ping after blocking rule   | Request timed out      | ✅ Success            |
+
+---
+
+## 📷 Screenshots
+
+### 1. Before Blocking (Ping Successful)
+![Before Blocking](./Screenshot116.png)
+
+### 2. After Blocking (Ping Failed)
+![After Blocking](./Screenshot119.png)
+
+### 3. Firewall Rule Created
+![Firewall Rule](./Screenshot118.png)
+
+---
+
+## ✅ Conclusion
+The firewall rule successfully blocked ICMP echo requests, preventing my PC from responding to `ping` commands from other devices. This confirms that Windows Firewall can be configured to control inbound traffic effectively.
